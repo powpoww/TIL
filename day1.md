@@ -87,7 +87,7 @@
 
 
 
-### 1. Typora의 사용
+### 1. Typora의 사용\
 
 - Typora는 마크다운 문법을 읽고 쓰기 위한 일종의 메모장. 
 
@@ -189,4 +189,34 @@ for i in range(10):
 문자열 이스케이프 : \
 
 \- 목차1
+
+
+
+
+
+### 3. Git-hub 사용
+
+
+
+#### 3-1. 원격 저장소 연결C:\Users\GW\TIL\README.md
+
+``` 
+# 연결
+git remote add origin https://github.com/powpoww/TIL.git
+
+# 연결 확인
+git remote -v
+origin  https://github.com/powpoww/TIL.git (fetch)
+origin  https://github.com/powpoww/TIL.git (push) 
+```
+
+
+
+git push origin master
+
+
+
+
+
+
 
