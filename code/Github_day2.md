@@ -173,6 +173,10 @@ nothing to commit (create/copy files and use "git add" to track)
    git 명령어를 작성할건데, remote(원격 저장소)와의 연결을 rm(remove, 삭제) 한다.
    그 원격 저장소의 이름은 origin이다.
    ```
+   
+4. **폴더 삭제**
+
+​		`rm -rf [folder]` 를 입력하여 삭제.
 
 
 
