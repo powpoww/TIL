@@ -99,7 +99,7 @@ class Solution:
 - 문자열을 별도로 리스트로 매핑하는 등의 처리는 상당한 연산 비용이 필요해 속도적으로 피해를 볼 수 있음.
 - 내부적으로 매우 빠르게 작동하는 특징. 대부분의 문자열 작업은 슬라이싱으로 처리하는 편이 가장 빠름.
 
-![image-20211225225223279](6_string_Manipulation.assets/image-20211225225223279.png)
+![image-20211225225223279](../../images/6_string_Manipulation/image-20211225225223279.png)
 
 ```python
 S = '안녕하세요'
