@@ -17,7 +17,7 @@ https://leetcode.com/problems/valid-palindrome/
 
 
 
-**MY ANSWER (80 ms, 15.9 MB -> 70 MS, 15.7 MB)**
+**MY ANSWER (80 ms, 15.9 MB)**
 
 ```python
 class Solution:
@@ -231,8 +231,9 @@ class Solution:
 
 https://leetcode.com/problems/longest-palindromic-substring/
 
-- 슬라이딩 윈도우에 대해 공부하라.
-- `while`문은 `False`가 찍힐때까지 반복한다.
+- 투 포인터가 중앙을 중심으로 확장하는 형태(슬라이딩 윈도우)의 풀이법. 다이나믹 프로그래밍은 상대적으로 느려 대신 사용할 수 있는 방법.
+- 홀수와 짝수 2개의 투포인터가 우측으로 이동하며 탐색을 함. `while`문은 `False`가 찍힐때까지 반복한다.
+- 문자열 슬라이싱으로 예외처리를 해 실행속도를 단축시키자.
 
 **RIGHT ANSWER (248 ms, 14.4 MB)**
 
@@ -259,3 +260,10 @@ class Solution:
         return result
 
 ```
+
+#### 6.1 유니코드와 UTF-8
+
+- 1 비트는 2진 기본정보인 1,0을 저장하며 1바이트는 8비트 즉 256 글자다. 체크섬은 Error detecting method이다.
+- 초기의 문자를 표현하는 대표적인 방식은 ASCII 인코딩 방식으로 1바이트에 모든 문자를 표현했다. 1비트는 체크섬(Checksum)으로 제외해 7비트 즉 128글자로 문자를 표현했다. 그렇기 때문에 한글, 한자 등 문자는 2개 이상의 특수문자를 합쳐 표현해 에러가 발생했다.
+- 유니코드(Unicode)는 2-4바이트 공간에 여유있게 문자를 할당해 이런 문제를 해결하고자 했다. 하지만 1바이트로 표현 가능한 영문자도 2바이트 이상의 공간을 사용하기에 이를 UTF-8로 개선하였다. 파이썬3에서는 문자열은 모두 유니코드 기반으로 전환했다.
+
