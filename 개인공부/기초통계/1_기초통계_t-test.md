@@ -23,9 +23,9 @@ $$
 Z-Score =  \frac{(X - \mu)}{\sigma}
 $$
 
-- z-socre 값으로 하는 테스트를 z-test라 하며, z-score로 변환하는 것을 z-transformation 혹은 표준화(standardization) 라고 한다.
-- 표준편차당 관찰값(X)이  평균으로부터 얼마나 떨어져 있는지를 의미한다.
-- standardization을 위해서 정규분포를 따른다는 가정이 있어야 한다.
+1. z-socre 값으로 하는 테스트를 z-test라 하며, z-score로 변환하는 것을 z-transformation 혹은 표준화(standardization) 라고 한다.
+1. 표준편차당 관찰값(X)이  평균으로부터 얼마나 떨어져 있는지를 의미한다.
+1. standardization을 위해서 정규분포를 따른다는 가정이 있어야 한다.
 
 
 
@@ -126,7 +126,7 @@ $$
 
 ### 4.3 Two-sample t-test
 
-- 두 표본의 평균을 비교하는 t-test. 사실 계산 공식은 **3**의 예시와 달리 아래와 같다.
+- 두 표본의 평균을 비교하는 t-test. 사실 계산 공식은 **3.2**의 예시와 달리 아래와 같다.
 
 $$
 t-value = \frac{\overline{X_a} - \overline{X_b}}{\sqrt{s^2/n_a + s^2/n_b}} \\
@@ -135,7 +135,7 @@ $$
 
 
 
-
+## 5. 
 
 
 
@@ -166,3 +166,4 @@ $$
 참조
 
 https://www.youtube.com/channel/UCnN2E8RCEuKi-WLBrd0Nu1A
+
