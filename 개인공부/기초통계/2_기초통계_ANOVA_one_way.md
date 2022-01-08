@@ -109,6 +109,8 @@ $$
 
 ## 5. ANOVA의 F-table과 사후검정
 
+#### 5.1 F-Table and F-Distribution
+
 ![F-Table | Degrees of freedom, Numerator, Phd student](https://i.pinimg.com/736x/27/dd/08/27dd0837da9fbdc075917fa659b60fa5--phd-student-statistics.jpg)
 
 ​	위의 표는 F-Table로 열 방향이 df1의 자유도, 행 방향이 df2의 자유도이다. 이 테이블은 p-value마다 다르며 위 테이블은 0.05에서의 테이블이다. 전의 예시에서 c.v.(critical value)가 4.74이며 p-value는 0.05보다 작으므로 유의하다. 이 c.v.를 F-Distribution에서의 확률밀도를 구해보면 0.05보다 작은 것을 알 수 있다. F-Distribution 또한 df1, df2마다 다르다.
@@ -117,17 +119,43 @@ $$
 
 
 
-## 6. JAMOVI
 
+
+#### 5.2 사후검정(Post-Hoc Test)
+
+- One-way ANOVA의 결과로 유의성을 확인했으면, 각 group간에 평균이 어떻게 다른지 파악하기 위해 사후검정을 실시해야 한다. 사후검정이란 일종의 multiple t-test이지만, Type-1 error를 발생하지 않는다. 따라서 각 그룹의 평균이 어떻게 다른지 개별적으로 비교가 가능하게 된다. 아래와 같은 종류의 사후검정방법이 있는데 결과의 큰 차이는 없다고 보아도 된다.
+  - Fisher's LSD
+  - Bonferroni
+  - Sheffe
+  - Turkey
+  - Duncan
+
+![image-20220107224029120](../../images/2_기초통계_ANOVA_one_way/image-20220107224029120.png)
+
+- 해당 예시를 JAMOVI로 One-way ANOVA 테스트를 한 결과이다.  group 1과 2는 평균간의 차이를 보이지 않으며 p-value또한 유의하지 않는다. group 3과 group 1, 2는 평균값이 뚜렷하게 차이를 보이며 p-value의 수치도 유의함을 보이는 것으로 나타난다. 그렇기 때문에 감기약의 효과와 플라시보의 효과는 통계적으로 다르다는 결과를 이끌어냈다.
+
+
+
+## 6. 실습 : JAMOVI
+
+**예시>**
+
+​	어떤 ISP(Internet Service Provieder)는 고객의 총 지출금액이 지불방법에 따라 차이가 나는지 알고 싶다. 종속변수는 총 지출금액(Total Charges), 독립변수는 지불방법(Payment Method)로 Bank Transfer, Credit Card, Electronic Check, Mailed Check 4가지 level이 있다.
+
+- 해당 예시에 대한 데이터를 https://www.kaggle.com/blastchar/telco-customer-churn 에서 다운로드해 JAMOVI로 One-way ANOVA 테스트를 수행했다.
+
+![image-20220107230205787](../../images/2_기초통계_ANOVA_one_way/image-20220107230205787.png)
 $$
 \eta^2 = \frac{SS_{Between}}{SS_{Between}+SS_{Within}} = \frac{SS_{Between}}{SS_{Total}}
 $$
 
-$\eta^2$ : 전체 분산 중의 독립변수의 비중. 종속변수가 가진 분산을 독립변수가 설명할 수 있는 정도를 나타냄.
+- $\eta^2$ : 일명 Effect size라 불리며 회귀분석의 결정계수($R^2$)와 동일한 의미를 가진다. 종속변수의 전체 분산 중의 독립변수의 비중, 곧 종속변수가 가진 분산을 독립변수가 설명할 수 있는 정도를 나타냄. 때문에 %로 표현하기도 하며 모형의 설명력이라 한다.
+- 종속변수는 어떤 원인에 의해 변화하는데 이 분산을 설명하기 위해 독립변수를 사용했으며 전체 분산에서 어느정도의 설명력을 가지는지를 표현한다 생각하자.
+- 먼저 One-way ANOVA의 F-test에서는 p-value가 0.01 미만으로 각 그룹의 분산 차이가 유의한 것으로 계산되었으며 Effect size는 12.3%를 가진다. 따라서 그룹간의 평균 차이를 알아보기 위해 사후검정을 실시했다.
 
+![image-20220107230600790](../../images/2_기초통계_ANOVA_one_way/image-20220107230600790.png)
 
-
-
+- 사후검정 결과 Bank transfer, Credit card는 차이가 없었지만 두 그룹과 Electronic check, Mailed check은 평균의 차이가 유의한 것으로 나타났으며 그래프로는 위와 같이 나타났다. 
 
 
 

@@ -157,10 +157,10 @@ dtype: object
 >>> df4 = pd.DataFrame([['a',2,np.nan],[1,'b',np.nan]])
    0  1   2
 0  a  2 NaN
-1  b  2 NaN
+1  1  b NaN
 
 >>> df4.apply(lambda x: print(x)) 
-각 Seriesd에 적용 (axis 축에 따라.)
+각 Seriesd에 적용 (axis 축에 따라. )
 0    a
 1    1
 Name: 0, dtype: object

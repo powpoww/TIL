@@ -58,6 +58,23 @@ $$
 
 
 
+## 3. 실습 : JAMOVI 
+
+**예시>**
+
+​	어떤 ISP(Internet Service Provieder)는 고객의 총 지출금액이 지불방법에 따라 차이가 나는지 알고 싶다. 종속변수는 총 지출금액(Total Charges), 독립변수는 지불방법(Payment Method)과 계약기간(Contract)를 사용한다. 총 지출금액은 Bank Transfer, Credit Card, Electronic Check, Mailed Check 4가지 level이 있다. 계약기간은 Month-to-month, One year, Two year로 세 그룹으로 나뉜다. 이 자료들의 Two-way ANOVA를 시행할 것이다.
+
+- 해당 예시에 대한 데이터는 이전 One-way ANOVA와 같은 자료로 https://www.kaggle.com/blastchar/telco-customer-churn 에서 다운로드해 JAMOVI로 Two-way ANOVA 테스트를 수행했다.
+
+![image-20220108003525001](../../images/3_기초통계_ANOVA_two_way/image-20220108003525001.png)
+
+- F-test는 각 독립변수 Payment Method, Contract에 대해 진행이 되었다. F-value 테스트에서는 각 컬럼과 Interaction 모두 유의하다 볼 수 있다.
+- Post  Hoc Test에서는 Payment Method가 One-way ANOVA때의 결과와 유사하며 Contract또한 각 group간의 낮은 p-value로 평균이 다른 그룹으로 생각된다. Interaction도 Post Hoc Test를 할 수 있지만 많은 결과로 인해 해석하기가 힘들어 아래의 표로 나타내어본다.
+
+![image-20220108003938136](../../images/3_기초통계_ANOVA_two_way/image-20220108003938136.png)
+
+- 위의 그래프에서는 Contract와의 Two-way ANOVA에서는 Payment Method의 One-way ANOVA와 다르게 Electronic check의 평균치가 사뭇 다른 그래프의 모습을 볼 수 있었다. Contract 그룹에 따라 Payment Metod의 각 그룹별 Total Charges는 우하향하는 모습을 보이지만 One year, Two year에서는 반등하며 다른 그룹군과의 차이를 보였다.
+- 아래의 Payment Method 그룹에 따라 Contrat 그룹들의 Total Charges를 본 그래프에서도 다른 그룹들은 비슷한 추세를 보이지만 Electronic check가 Month-to-month에서는 제일 낮지만 One year 이후로 크게 반등하는걸 볼 수 있다. 
 
 
 
@@ -69,6 +86,9 @@ $$
 
 
 
+
+
+**Skip : RM ANOVA, Contrast test** 
 
 **참조 : 아래의 영상을 바탕으로 작성되었음.**
 
