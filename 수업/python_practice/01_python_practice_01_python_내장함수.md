@@ -1,4 +1,4 @@
-# 01. Python Practice - 내장함수
+### 1. Python Practice - 내장함수
 
 
 
@@ -9,7 +9,7 @@
 
 
 
-###  **1. 변수생성**
+####  **1.1 변수생성**
 
 - 변수란 값을 저장하기 위한 객채(object)로 명명 규칙은 다음과 같다.
   - 대소문자 구분이나 숫자로 시작이 불가.
@@ -18,7 +18,7 @@
 
 
 
-### 2. 모듈(module)
+#### 1.2 모듈(module)
 
 모듈을 호출해 하위 함수를 사용해본다.
 
@@ -43,9 +43,9 @@ import math as ma # as (alias : 별칭)
 
 
 
-### 파이썬 기본 구조
+### 2. 파이썬 기본 구조
 
-#### 1. 리스트(list)
+#### 2.1 리스트(list)
 
 - `index`는 `scalar`를 반환(non-dimension) `slice`는 `list`를 반환한다.
 
@@ -85,7 +85,7 @@ TypeError: list indices must be integers or slices, not tuple
 
 
 
-#### 2. 함수(function)와 메서드(method)
+#### 2.2 함수(function)와 메서드(method)
 
 - 함수 : 인수의 전달이 모두 괄호 안에서 진행
 - 메서드 : 함수의 일부로 인수의 전달 방식이 다르다. 객체(object)에서 호출 가능한 형태의 함수.
@@ -104,7 +104,7 @@ TypeError: list indices must be integers or slices, not tuple
 
 
 
-#### 3. 문자열 메서드
+#### 2.3 문자열 메서드
 
 - `str.upper()` : 알파벳 대문자 치환.
 - `str.lower()` : 알파벳 소문자 치환.

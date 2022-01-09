@@ -1,8 +1,8 @@
-# 01. Python Practice - 산술연산
+## 1. Python Practice - 산술연산
 
 
 
-### **1. Series 연산**
+### **1.1 Series 연산**
 
 - 판다스는 1차원 자료인 Series를 기본 단위로 하는 2차원 정형데이터(테이블, 표, 데이터프레임)이다. 
 - Series에서는 하나의 데이터 타입만 허용함. (object는 다양한 타입의 요소를 가짐.)
@@ -80,7 +80,7 @@ dtype: float64
 
 
 
-### **2. DataFrame 연산**
+### **1.2 DataFrame 연산**
 
 - 연산 또한 key에 관하여 Series에서 적용되던 법칙과 동일. 추가로 column에 대해서도 마찬가지임.
 - col, index를 직접 입력해도 되고 dict도 입력가능.

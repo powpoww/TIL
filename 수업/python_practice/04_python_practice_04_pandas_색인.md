@@ -1,8 +1,8 @@
-# 01. Python Practice - 색인
+### 1. Python Practice - 색인
 
 
 
-### 1. Series
+#### 1.1 Series
 
 - `list`, `ndarray`와 마찬가지로 한개의 index를 입력하면 scalar로 호출되지만, list, bool 등을 입력하면 Series로 반환함.
 
@@ -72,7 +72,7 @@ dtype: int64
 
 
 
-### 2. DataFrame
+#### 1.2 DataFrame
 
 - DataFrame에서도 마찬가지로 iloc, loc이 사용 가능하며 Series에서와 법칙이 동일함.
 - Series에서 처럼 한 element를 호출하면 scalar값을 반환하며, 슬라이스 등에서는 Series 혹은 DataFrame을 반환.
@@ -91,13 +91,19 @@ dtype: int64
 a     1     2     3
 b     4     5     6
 
+
+# 색인(indexing) ****
+
 # 컬럼 선택
 >>> d3.col1     # d3['col1']
 a    1
 b    4
 Name: col1, dtype: int32
 
-# iloc : 위치 index로 호출
+
+# iloc, loc ***
+# iloc : positional indexing
+# loc : label indexing
 >>> d3.iloc[:,0]
 a    1
 b    4
@@ -110,8 +116,6 @@ b     4     5     6
    col1  col3
 a     1     3
 b     4     6
-
-# loc : index, col의 라벨로 호출
 >>> d3.loc[:,['col1','col2']]
    col1  col2
 a     1     2
@@ -120,9 +124,11 @@ b     4     5
    col1  col2
 a     1     2
 b     4     5
->>> d3.loc[:'b']
+
+# 조건색인 처리
+>>> d3.loc[d3.col1 == 1, :]
    col1  col2  col3
 a     1     2     3
-b     4     5     6
+
 ```
 
