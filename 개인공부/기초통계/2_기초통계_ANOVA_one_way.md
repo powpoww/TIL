@@ -157,9 +157,9 @@ $$
 
 - 사후검정 결과 Bank transfer, Credit card는 차이가 없었지만 두 그룹과 Electronic check, Mailed check은 평균의 차이가 유의한 것으로 나타났으며 그래프로는 위와 같이 나타났다. 
 
+---
 
+**참조**
 
-**참조 : 아래의 영상을 바탕으로 작성되었음.**
-
-https://youtu.be /HlSyvMRLu4w
+https://www.youtube.com/channel/UCnN2E8RCEuKi-WLBrd0Nu1A
 

@@ -90,7 +90,9 @@ $$
 
 **Skip : RM ANOVA, Contrast test** 
 
-**참조 : 아래의 영상을 바탕으로 작성되었음.**
+---
 
-https://youtu.be/Z-wrgf7QfCM
+**참조**
+
+https://www.youtube.com/channel/UCnN2E8RCEuKi-WLBrd0Nu1A
 
