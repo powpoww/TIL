@@ -132,3 +132,9 @@ a     1     2     3
 
 ```
 
+
+
+#### 1.3 Multiple index
+
+https://towardsdatascience.com/accessing-data-in-a-multiindex-dataframe-in-pandas-569e8767201d
+
