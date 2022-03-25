@@ -280,6 +280,35 @@ order by Employeeid;
 4. 쿼리 실행 순간의 시간 함수
    - now()
 
+```mysql
+### 날짜 차이 가져오기
+select now();
+
+select now(), year( now() ), month( now() ) , day( now())
+, hour(now()), minute(now()), second(now()) 
+, week(now()), quarter(now());
+
+select now()
+, date_add(now(), interval 1 year)
+, date_add(now(), interval 1 month)
+, date_add(now(), interval 1 minute)
+, date_add(now(), interval 1 second)
+, date_sub(now(), interval 1 year)
+, date_sub(now(), interval 1 month)
+, date_sub(now(), interval 1 minute)
+, date_sub(now(), interval 1 second);
+
+select * from salesOrderheader;
+select orderdate, duedate, shipdate
+, timestampdiff (day, orderdate, duedate) 
+, timestampdiff (day, orderdate, shipdate) 
+from salesorderheader;
+select * from salesOrderheader;
+select timestampdiff (day, '1984-03-01', now());
+
+select now(), convert(year(now()) + month(now()), date) ;
+```
+
 
 
 **(8) Convert()**
@@ -292,6 +321,23 @@ order by Employeeid;
 - Having : Group by의 where절과 같음.
   - Group by와 함께 등장하는 aggregation 함수
     - Count(*), sum(column_name), min(column_name), max(column_name), avg(column_name)
+
+```mysql
+### Group by
+Select salesPersonID, count(*) as 수주건수 , sum(TotalDue) as 매출총액
+from salesOrderHeader
+group by salesPersonID
+order by salespersonID;
+
+Select salesPersonID, TerritoryID, sum(Totaldue) as 매출총액 from salesOrderHeader
+group by salesPersonID, TerritoryID
+order by salespersonID;
+
+Select salesPersonID,  TerritoryID, shipmethodID, customerID, count(*) as 수주건수 , sum(TotalDue) as 매출총액
+from salesOrderHeader
+group by salesPersonID,  TerritoryID, shipmethodID, customerID
+order by salespersonID;
+```
 
 
 
